@@ -9,12 +9,17 @@ import com.tictactoe.impl.GameBoard;
 public class ValidationTests {	
 	
 	GameBoard gameboard=new GameBoard();	
-	@Test
+	
+    @Test
 	public void ValidationBoardCounttest() {
 		
 		assertNotEquals("16",gameboard.validateBoardCountTest(3));	
 		
+	}	
+	@Test
+	public void ValidateHorizontalMoveSuccess() {
+		
+		String[] moves = {"X"};
+		assertEquals("Success",gameboard.ValidateHorizontalSuccess(moves));
 	}
-	
-	
 }
